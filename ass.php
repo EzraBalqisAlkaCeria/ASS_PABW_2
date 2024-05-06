@@ -14,10 +14,10 @@ $query = "SELECT * FROM naskah";
 $result = $koneksi->query($query);
 
 if ($result->num_rows > 0) {
-    $manuscripts = array();
+    $naskah = array();
     while($row = $result->fetch_assoc()) {
-        $manuscripts[] = $row;
-    echo json_encode($manuscripts);
+        $naskah[] = $row;
+    echo json_encode($naskah);
 } else {
     echo "0 results";
 }
